@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "node server.js",
     "server:dev": "nodemon server.js",
-    "start":"node server.js"
+    "start":"bun server.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
