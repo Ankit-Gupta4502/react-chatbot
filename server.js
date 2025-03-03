@@ -8,7 +8,14 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = 3000;
-app.use("/static", express.static(`${__dirname}/dist`));
+app.use("/static", express.static(`${__dirname}/dist`, {
+    maxAge: '1d',
+    setHeaders: (res, path) => {
+        if (path.endsWith('.css')) {
+            res.setHeader('Cache-Control', 'public, max-age=86400');
+        }
+    }
+}));
 
 
 app.get('/', (req, res) => {
