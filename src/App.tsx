@@ -22,7 +22,7 @@ function App() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed border-0 outline-0 bottom-4 right-4 bg-blue-600 text-white rounded-full   w-12 h-12  shadow-lg hover:bg-blue-700 transition-colors z-10"
+        className=" border-0 outline-0  bg-blue-600 text-white rounded-full   w-12 h-12  shadow-lg hover:bg-blue-700 transition-colors z-10"
         aria-label="Toggle chat"
       >
         {isOpen ? (
